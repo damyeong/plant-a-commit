@@ -2,7 +2,7 @@ name: Verse Planter
 
 on:
   schedule:
-    - cron: '45 14 * * *'
+    - cron: '*/5 * * * *'  # 매 5분마다 실행 (테스트용)
   workflow_dispatch:
 
 jobs:
