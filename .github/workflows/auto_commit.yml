@@ -2,7 +2,7 @@ name: Verse Planter
 
 on:
   schedule:
-    - cron: '37 14 * * *'
+    - cron: '39 14 * * *'
   workflow_dispatch:
 
 jobs:
