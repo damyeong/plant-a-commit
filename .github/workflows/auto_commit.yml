@@ -1,6 +1,9 @@
 name: Verse Planter
 
 on:
+  push:
+    branches:
+      - green
   schedule:
     - cron: '*/5 * * * *'  # 매 5분마다 실행 (테스트용)
   workflow_dispatch:
