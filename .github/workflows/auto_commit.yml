@@ -5,7 +5,7 @@ on:
     branches:
       - green
   schedule:
-    - cron: '*/5 * * * *'  # 매 5분마다 실행 (테스트용)
+    - cron: '0 22 * * *'  # KST 오전 7시
   workflow_dispatch:
 
 jobs:
