@@ -1,0 +1,21 @@
+name: Verse Planter
+
+on:
+  schedule:
+    - cron: '0 9 * * *'
+  workflow_dispatch:
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Git
+        run: |
+          git config user.name "2dam0"
+          git config user.email "yidamyeong@gmail.com"
+      - name: Run poet
+        run: |
+          chmod +x poet.sh
+          ./poet.sh
