@@ -5,18 +5,21 @@ on:
     branches:
       - green
   schedule:
-    - cron: '0 22 * * *'  # KST 오전 7시
+    - cron: '0 6 * * *'  # KST 15시
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  commit:
+  poetry-commit:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
       - name: Set up Git
         run: |
-          git config --global user.name "damyeong"
+          git config --global user.name "2dam0"
           git config --global user.email "yidamyeong@gmail.com"
       - name: Run poet
         env:
