@@ -19,6 +19,8 @@ jobs:
           git config --global user.name "damyeong"
           git config --global user.email "yidamyeong@gmail.com"
       - name: Run poet
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           chmod +x poet.sh
           ./poet.sh
